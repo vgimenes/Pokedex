@@ -1,3 +1,10 @@
+//
+//  File.swift
+//  pokedex
+//
+//  Created by Aluno Mack on 19/03/25.
+//
+
 // By: Deepseek
 
 enum ElementType: String {
@@ -21,7 +28,7 @@ enum ElementType: String {
     case ghost
 }
 
-struct Pokemon : Hashable {
+struct Pokemon {
     var id: Int
     var name: String
     var types: [ElementType]
@@ -180,3 +187,4 @@ let pokemons: [Pokemon] = [
     Pokemon(id: 150, name: "mewtwo", types: [.psychic]),
     Pokemon(id: 151, name: "mew", types: [.psychic])
 ]
+
