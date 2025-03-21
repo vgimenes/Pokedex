@@ -1,20 +1,26 @@
 //
 //  StatsView.swift
-//  Pokedex
+//  pokedexVG
 //
-//  Created by Aluno Mack on 19/03/25.
+//  Created by Aluno Mack on 21/03/25.
 //
 
 import SwiftUI
-
-struct StatsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct StatsView_Previews: PreviewProvider {
-    static var previews: some View {
-        StatsView()
-    }
-}
+ 
+ struct StatsView: View {
+     @State var porcentagem = havePoke.count * 100 / pokemons.count
+     var body: some View {
+         VStack{
+             Text("Você possui \(havePoke.count) / \(pokemons.count) Pokémons")
+                 .padding()
+             Text("\(porcentagem)% do total")
+             
+         }
+     }
+ }
+ 
+ struct StatsView_Previews: PreviewProvider {
+     static var previews: some View {
+         StatsView()
+     }
+ }
